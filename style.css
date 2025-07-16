@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: rgb(26, 26, 26);
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+.background {
+  height: 100vh;
+  background-image: url(/images/image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.popup {
+  width: 80vw;
+  height: 70vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+section:first-child {
+  background-color: rgba(117, 187, 199, 0.463);
+  border-radius: 20px 0px 0px 20px;
+}
+section:first-child + section {
+  background-color: rgba(210, 98, 180, 0.336);
+  border-radius: 0px 20px 20px 0px;
+}
+h1,
+h2 {
+  padding: 15px 20px;
+  color: rgb(209, 106, 181);
+  /* color: rgba(117, 187, 199, 0.463); */
+  font-size: 30px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+h2 {
+  color: rgb(117, 187, 199);
+}
+p + button {
+  font-size: 20px;
+  color: rgb(29, 227, 210);
+  background-color: rgba(215, 47, 170, 0.835);
+  padding: 10px 4px;
+  border-radius: 5px;
+  border: 2px solid rgb(64, 215, 200);
+  cursor: pointer;
+}
+p {
+  color: aliceblue;
+  text-align: justify;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+input {
+  width: 75%;
+  padding: 7px 16px;
+  margin-bottom: 10px;
+}
+input::placeholder {
+  color: rgba(215, 47, 170, 0.835);
+  font-size: 21px;
+}
+label > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 5px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px;
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  background-color: rgba(29, 227, 210, 0.845);
+}
+label > div > p {
+  padding: 0;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+p > a {
+  font-size: 22px;
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+button {
+  font-size: 20px;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 2, 187);
+  padding: 2px 10px;
+  cursor: pointer;
+  background-color: rgba(29, 227, 210, 0.868);
+  color: rgba(215, 47, 170, 0.992);
+}
+@media (max-width: 650px), (max-height: 580px) {
+  h1,
+  h2 {
+    padding: 3px;
+    font-size: 25px;
+  }
+  p {
+    padding: 5px;
+    font-size: 16px;
+  }
+  p + button {
+    font-size: 15px;
+  }
+  .popup {
+    flex-direction: column;
+    align-items: flex-end;
+    height: 99%;
+    width: 90vw;
+  }
+  section:first-child {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    height: 30;
+  }
+  section:first-child + section {
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    background-color: rgba(210, 98, 180, 0.336);
+  }
+  input {
+    width: 75%;
+    padding: 3px 14px;
+    margin-bottom: 8px;
+  }
+}
